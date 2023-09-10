@@ -10,21 +10,25 @@ Using the correct include flags is important, otherwise the `<caml/...>` headers
 
 # Installation
 
-`opam install dune-compiledb`
+```sh
+opam install dune-compiledb
+```
 
 Requires OCaml 4.08+ and Dune 2.7+.
 
 # Usage
 
 Run this to create a `compile-commands.json`:
-`dune rules | dune-compiledb`
+```sh
+dune rules | dune-compiledb
+```
 
 Now `clangd` integration with your editor should work.
 
 # Alternatives
 
 [bear](https://github.com/rizsotto/Bear) can be used if your project doesn't have header files generated at build time:
-```
+```sh
 dune clean && bear -- dune build @check --cache=disabled
 ```
 
