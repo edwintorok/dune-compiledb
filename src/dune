@@ -1,0 +1,5 @@
+(executable
+ (public_name dune-compiledb)
+ (name main)
+ (libraries ezjsonm sexplib sexplib0 fpath)
+ (package dune-compiledb))

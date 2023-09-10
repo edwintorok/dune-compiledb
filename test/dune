@@ -1,0 +1,6 @@
+(cram
+ (enabled_if
+  (= %{os_type} Unix))
+ (deps
+  %{bin:dune-compiledb}
+  (source_tree ../example/dune)))
