@@ -234,7 +234,8 @@ module CompileCommand = struct
   let of_rule ~source_map rule =
     match rule with
     | Rule.{action= Action.(ChdirRun {dir; run= cmd :: args}); targets; deps} ->
-        let+ c_file = List.find_opt (Fpath.has_ext "c") deps
+        let+ c_file =
+          List.find_opt (Fpath.mem_ext ["c"; "cpp"; "cc"; "cxx"]) deps
         and+ _output = List.find_opt (Fpath.has_ext "o") targets in
         let file =
           Fpath.Map.find_opt c_file source_map |> Option.value ~default:c_file

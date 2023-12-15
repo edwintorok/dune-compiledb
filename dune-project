@@ -18,6 +18,6 @@
   (ezjsonm (>= 1.0.0))
   sexplib
   sexplib0
-  fpath
+  (fpath (>= 0.7.1))
  )
 )
