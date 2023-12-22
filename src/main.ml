@@ -25,16 +25,23 @@
 open Sexplib
 
 let debug = ref false
+
 let output_directory = ref ""
 
 let () =
   let usage_msg =
-    Printf.sprintf "Usage: dune rules | %s [-d] [-o directory]" Sys.executable_name
+    Printf.sprintf "Usage: dune rules | %s [-d] [-o directory]"
+      Sys.executable_name
   in
-  let speclist = [
-    ("-d", Arg.Set debug, "Enable debug output");
-    ("-o", Arg.Set_string output_directory, "Output directory for compile_commands.json")
-  ] in
+  let speclist =
+    [
+      ("-d", Arg.Set debug, "Enable debug output")
+    ; ( "-o"
+      , Arg.Set_string output_directory
+      , "Output directory for compile_commands.json"
+      )
+    ]
+  in
   Arg.parse speclist ignore usage_msg
 
 (* Applicative syntactic sugar for {!module:Option}. *)
@@ -274,8 +281,10 @@ let parse_rules_from_stdin () =
   stdin |> Sexp.input_rev_sexps |> List.filter_map Rule.of_sexp
 
 let with_output f =
-  let outfile_name = Filename.concat !output_directory "compile_commands.json" in
-  if !debug then Format.eprintf "Saving to file %s" outfile_name;
+  let outfile_name =
+    Filename.concat !output_directory "compile_commands.json"
+  in
+  if !debug then Format.eprintf "\nSaving to file %s\n" outfile_name ;
   let json = open_out outfile_name in
   Fun.protect ~finally:(fun () -> close_out json) (fun () -> f json)
 
