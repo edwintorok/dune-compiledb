@@ -1,6 +1,6 @@
 ## 0.6.0 (2023-12-22)
 
-Add `-o` flag to chose destination directory (@kohlivarun5)
+Add `-o` flag to choose destination directory (@kohlivarun5)
 
 ## 0.5.0 (2023-12-15)
 
