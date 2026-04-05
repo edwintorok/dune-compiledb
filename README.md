@@ -1,6 +1,8 @@
 ![Build and test](https://github.com/edwintorok/dune-compiledb/actions/workflows/workflow.yml/badge.svg)
 [![OCaml-CI Build Status](https://img.shields.io/endpoint?url=https://ocaml.ci.dev/badge/edwintorok/dune-compiledb/main&logo=ocaml)](https://ocaml.ci.dev/github/edwintorok/dune-compiledb)
 
+Moved to [https://codeberg.org/edwintorok/lintcstubs](https://codeberg.org/edwintorok/lintcstubs).
+Pull-requests and issues accepted in both places.
 
 `Dune-compiledb` — generate `compile_commands.json`
 ===================================================
