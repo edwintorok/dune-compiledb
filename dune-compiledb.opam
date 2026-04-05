@@ -3,13 +3,13 @@ opam-version: "2.0"
 synopsis: "Generate compile_commands.json from dune rules"
 description:
   "Generates a compile_commands.json from dune rules that can be used by language server like 'clangd', or static analyzers like 'goblint'. Works with generated headers."
-maintainer: ["Edwin Török <edwin.torok@cloud.com>"]
+maintainer: ["Edwin Török <edwin@etorok.net>"]
 authors: ["Edwin Török <edwin.torok@cloud.com>"]
 license: "LGPL-2.1-or-later"
-homepage: "https://github.com/edwintorok/dune-compiledb"
-bug-reports: "https://github.com/edwintorok/dune-compiledb/issues"
+homepage: "https://codeberg.org/edwintorok/dune-compiledb"
+bug-reports: "https://codeberg.org/edwintorok/dune-compiledb/issues"
 depends: [
-  "dune" {>= "2.7"}
+  "dune" {>= "3.17"}
   "ocaml" {>= "4.08"}
   "ezjsonm" {>= "1.0.0"}
   "sexplib"
@@ -31,4 +31,4 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-dev-repo: "git+https://github.com/edwintorok/dune-compiledb.git"
+dev-repo: "git+https://codeberg.org/edwintorok/dune-compiledb.git"

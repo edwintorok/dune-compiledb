@@ -1,12 +1,12 @@
-(lang dune 2.7)
+(lang dune 3.17)
 (cram enable)
 (implicit_transitive_deps false)
 
 (generate_opam_files)
 (name dune-compiledb)
-(source (github edwintorok/dune-compiledb))
+(source (codeberg edwintorok/dune-compiledb))
 (authors "Edwin Török <edwin.torok@cloud.com>")
-(maintainers "Edwin Török <edwin.torok@cloud.com>")
+(maintainers "Edwin Török <edwin@etorok.net>")
 (license LGPL-2.1-or-later)
 
 (package
