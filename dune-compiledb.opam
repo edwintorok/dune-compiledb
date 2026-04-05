@@ -9,7 +9,7 @@ license: "LGPL-2.1-or-later"
 homepage: "https://codeberg.org/edwintorok/dune-compiledb"
 bug-reports: "https://codeberg.org/edwintorok/dune-compiledb/issues"
 depends: [
-  "dune" {>= "3.17"}
+  "dune" {>= "3.18"}
   "ocaml" {>= "4.08"}
   "ezjsonm" {>= "1.0.0"}
   "sexplib"
@@ -32,3 +32,4 @@ build: [
   ]
 ]
 dev-repo: "git+https://codeberg.org/edwintorok/dune-compiledb.git"
+x-maintenance-intent: ["(latest)"]

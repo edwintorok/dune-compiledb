@@ -1,4 +1,4 @@
-(lang dune 3.17)
+(lang dune 3.18)
 (cram enable)
 (implicit_transitive_deps false)
 
@@ -13,6 +13,7 @@
  (name dune-compiledb)
  (synopsis "Generate compile_commands.json from dune rules")
  (description "Generates a compile_commands.json from dune rules that can be used by language server like 'clangd', or static analyzers like 'goblint'. Works with generated headers.")
+ (maintenance_intent "(latest)")
  (depends
   (ocaml (>= 4.08))
   (ezjsonm (>= 1.0.0))
