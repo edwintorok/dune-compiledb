@@ -1,0 +1,22 @@
+name: Build and test
+
+on: [push, pull_request]
+
+permissions: {}
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        runs-on: [codeberg-medium]
+    runs-on: ${{ matrix.runs-on }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Use dune
+        uses: https://github.com/ocaml-dune/setup-dune@v2
+
