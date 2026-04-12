@@ -8,7 +8,7 @@ jobs:
   build:
     strategy:
       matrix:
-        runs-on: [codeberg-medium]
+        runs-on: [ubuntu-latest]
         ocaml: [4.14.3, 5.4.1]
     runs-on: ${{ matrix.runs-on }}
 
@@ -23,7 +23,7 @@ jobs:
           printf '(lang dune 3.18)\n(lock_dir (constraints (ocaml (= %s))))\n' ${{ matrix.ocaml }} >dune-workspace.ci
 
       - name: Use dune
-        uses: https://github.com/ocaml-dune/setup-dune@v2
+        uses: ocaml-dune/setup-dune@v2
         with:
           version: latest
           workspace: dune-workspace.ci
